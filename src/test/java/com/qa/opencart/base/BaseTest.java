@@ -15,6 +15,8 @@ import com.qa.opencart.pages.ProductInfoPage;
 import com.qa.opencart.pages.RegisterPage;
 import com.qa.opencart.pages.SearchResultsPage;
 
+import io.qameta.allure.Step;
+
 public class BaseTest {
 	
 	protected WebDriver driver;
@@ -46,7 +48,7 @@ public class BaseTest {
 		softAssert = new SoftAssert();
 	}
 	
-	
+	@Step("all active browsers are closed")
 	@AfterTest
 	public void tearDown() {
 		driver.quit();
