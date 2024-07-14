@@ -1,11 +1,14 @@
 package com.qa.opencart.tests;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.testng.Assert;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
 import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstants;
+import com.qa.opencart.factory.DriverFactory;
 import com.qa.opencart.listeners.TestAllureListener;
 
 import io.qameta.allure.Description;
@@ -21,12 +24,14 @@ import io.qameta.allure.Story;
 @Listeners(TestAllureListener.class)
 public class LoginPageTest extends BaseTest {
 
+	private static final Logger log = LogManager.getLogger(LoginPageTest.class);
 	
 	@Description("login page title test...")
 	@Severity(SeverityLevel.MINOR)
 	@Test(priority = 1)
 	public void loginPageTitleTest() {
 		String actTitle = loginPage.getLoginPageTitle();
+		log.info("login page title is : " +actTitle);
 		Assert.assertEquals(actTitle, AppConstants.LOGIN_PAGE_TITLE);
 	}
 

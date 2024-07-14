@@ -2,6 +2,8 @@ package com.qa.opencart.tests;
 
 import java.util.List;
 
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.openqa.selenium.By;
 import org.openqa.selenium.OutputType;
 import org.testng.Assert;
@@ -12,6 +14,8 @@ import com.qa.opencart.base.BaseTest;
 import com.qa.opencart.constants.AppConstants;
 
 public class AccountsPageTest extends BaseTest {
+	
+	private static final Logger log = LogManager.getLogger(AccountsPageTest.class);
 
 	@BeforeClass
 	public void accSetUp() {
@@ -49,7 +53,8 @@ public class AccountsPageTest extends BaseTest {
 	@Test
 	public void accPageHeadersTest() {
 		List<String> actAccPageHeadersList = accPage.getAccountsHeaders();
-		System.out.println(actAccPageHeadersList);
+//		System.out.println(actAccPageHeadersList);
+		log.info(actAccPageHeadersList);
 		//sort the actual list
 		//sort the expected list
 		//compare
