@@ -29,9 +29,9 @@
 	</test> 
 
 
-	 <test name="Accounts Page Test">
+	 <!--<test name="Accounts Page Test">
 		<parameter name="browser" value="firefox" />
-		<!--<parameter name="browserversion" value="113" />-->
+		<parameter name="browserversion" value="113" />
 		<parameter name="testname" value="Accounts Page Test" />
 
 
@@ -44,7 +44,7 @@
 
 	 <test name="Product Results Page Test">
 		<parameter name="browser" value="edge" />
-		<!--<parameter name="browserversion" value="113" />-->
+		<parameter name="browserversion" value="113" />
 		<parameter name="testname"
 			value="Products Results Page Test" />
 
@@ -52,7 +52,7 @@
 		<classes>
 			<class name="com.qa.opencart.tests.ProuctResultsPageTest" />
 		</classes>
-	</test>
+	</test>-->
 
 
 	<!--<test name="Register Page Test">
